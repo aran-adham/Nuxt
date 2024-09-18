@@ -60,7 +60,7 @@ export default {
   },
   async mounted() {
     try {
-      const response = await fetch("http://localhost:8000/api/user", {
+      const response = await fetch("nest-production-1596.up.railway.app/api/user", {
         headers: { "Content-Type": "application/json" },
         credentials: 'include',
       });
@@ -73,7 +73,7 @@ export default {
 
     // Fetch all users
     try {
-      const response = await fetch("http://localhost:8000/api/users", {
+      const response = await fetch("nest-production-1596.up.railway.app/api/users", {
         headers: { "Content-Type": "application/json" },
       });
 
@@ -96,7 +96,7 @@ export default {
       const userId = this.userToDelete.id;
 
       try {
-        await fetch(`http://localhost:8000/api/users/${userId}`, {
+        await fetch(`nest-production-1596.up.railway.app/api/users/${userId}`, {
           method: 'DELETE',
           headers: { "Content-Type": "application/json" }
         });

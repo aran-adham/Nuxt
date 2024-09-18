@@ -43,7 +43,7 @@ export default {
     const userId = this.$route.params.id; // Get user ID from $route (not useRoute)
 
     try {
-      const response = await fetch(`http://localhost:8000/api/users/${userId}`, {
+      const response = await fetch(`nest-production-1596.up.railway.app/api/users/${userId}`, {
         headers: { "Content-Type": "application/json" }
       });
       const userData = await response.json();
@@ -57,7 +57,7 @@ export default {
       const userId = this.$route.params.id; // Access $route directly
 
       try {
-        await fetch(`http://localhost:8000/api/users/${userId}`, {
+        await fetch(`nest-production-1596.up.railway.app/api/users/${userId}`, {
           method: 'PUT',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(this.user)

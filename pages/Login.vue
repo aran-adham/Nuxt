@@ -50,7 +50,7 @@ export default {
     async submit() {
       const { login } = useAuthState();
       try {
-        const response = await fetch("http://localhost:8000/api/login", {
+        const response = await fetch("nest-production-1596.up.railway.app/api/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: 'include',
